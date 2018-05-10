@@ -1,0 +1,80 @@
+#!/bin/bash
+usage="
+*** usage:
+
+diffepub - compare text in two files. Valid format for input files are:
+MOBI, LIT, PRC, EPUB, ODT, HTML, CBR, CBZ, RTF, TXT, PDF and LRS.
+
+diffepub -h | FILE1 FILE2
+
+-h print this message
+
+Example:
+diffepub my_file1.pdf my_file2.pdf
+diffepub my_file1.epub my_file2.epub
+
+v0.2 (added parallel and 3 files processing)
+"
+
+#parse command line options
+while getopts "h" OPTIONS ; do
+  case ${OPTIONS} in
+    h|-help) echo "${usage}"; exit;;
+  esac
+done
+shift $(($OPTIND - 1))
+
+#check if first 2 command line arguments are files
+if [ -z "$1" ] || [ -z "$2" ] || [ ! -f "$1" ] || [ ! -f "$2" ]
+then
+  echo "ERROR: input files do not exist."
+  echo
+  echo "$usage"
+  exit
+fi
+
+
+
+#create temporary files (first & last 10 characters of
+# input files w/o extension)
+file1=`basename "$1" | sed -r -e '
+s/\..*$//                     #strip file extension
+s/(^.{1,10}).*(.{10})/\1__\2/ #take first-last 10 chars
+s/$/_XXX.txt/                 #add tmp file extension
+'`
+TMPFILE1=$(mktemp --tmpdir "$file1")
+
+file2=`basename "$2" | sed -r -e '
+s/\..*$//                     #strip file extension
+s/(^.{1,10}).*(.{10})/\1__\2/ #take first-last 10 chars
+s/$/_XXX.txt/                 #add tmp file extension
+'`
+TMPFILE2=$(mktemp --tmpdir "$file2")
+
+if [ "$#" -gt 2 ]
+then
+  file3=`basename "$3" | sed -r -e '
+  s/\..*$//                     #strip file extension
+  s/(^.{1,10}).*(.{10})/\1__\2/ #take first-last 10 chars
+  s/$/_XXX.txt/                 #add tmp file extension
+  '`
+  TMPFILE3=$(mktemp --tmpdir "$file3")
+fi
+
+#convert to txt and compare using meld
+doit() { #to solve __space__ between filenames and parallel
+    ebook-convert $1
+}
+export -f  doit
+
+if [ "$#" -gt 2 ]
+then
+  (parallel --no-notice doit  ::: "$1 $TMPFILE1" \
+                                  "$2 $TMPFILE2" \
+                                  "$3 $TMPFILE3" ) &&
+  (meld "$TMPFILE1" "$TMPFILE2" "$TMPFILE3")
+else
+   (parallel --no-notice doit ::: "$1 $TMPFILE1" \
+                                  "$2 $TMPFILE2" ) &&
+    (meld "$TMPFILE1" "$TMPFILE2")
+fi
