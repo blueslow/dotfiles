@@ -45,13 +45,3 @@ if [ -f "$HOME/src/smc/smc_6_6_0/bin/Smc.jar" ] ; then
     export SMC_HOME
     export SMC
 fi
-
-# to propagate X11 over ssh when sudo
-LIVE=`echo $DISPLAY | awk -F: '{print $2}' | awk -F. '{print $1}'`
-xauth list | grep unix:$LIVE | awk '{print "xauth add " $0}' >/home/klaseh/tmp/xuser
-
-#Load ssh agent if it ain't loaded already
-#if [ -z "$SSH_AUTH_SOCK" ] ; then
-#    eval `ssh-agent`
-#    ssh-add
-#fi

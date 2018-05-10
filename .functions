@@ -229,5 +229,5 @@ function lssha() {
 # `propX` to propagate X11 over ssh when sudo
 function propX() {
 	LIVE=`echo $DISPLAY | awk -F: '{print $2}' | awk -F. '{print $1}'`
-	xauth list | grep unix:$LIVE | awk '{print "xauth add " $0}' >/home/klaseh/tmp/xuser
+	xauth list | grep unix:$LIVE | awk '{print "xauth add " $0}' >$HOME/tmp/xuser
 }
