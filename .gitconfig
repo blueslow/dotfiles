@@ -79,6 +79,17 @@
 		fi \
 	}; f"
 
+	# CHeck up these aliases, from previous motoguzzi
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	wdiff = diff --word-diff=color --unified=1
+	root = rev-parse --show-toplevel
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
@@ -106,6 +117,12 @@
 	# Speed up commands involving untracked files such as `git status`.
 	# https://git-scm.com/docs/git-update-index#_untracked_cache
 	untrackedCache = true
+
+	# Previous settings on Motoguzzi
+	autocrlf = input
+	safecrlf = true
+	editor = atom --wait
+	excludesfile = ~/.gitignore_global
 
 [color]
 
@@ -135,7 +152,7 @@
 [commit]
 
 	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
+	gpgsign = false
 
 [diff]
 
@@ -147,13 +164,21 @@
 	# Use `hexdump` to diff binary files
 	textconv = hexdump -v -C
 
+[diff "pandoc"]
+   textconv=pandoc --to=markdown
+   prompt = false
+
+[il8]
+	commitencoding = UTF-8
+
+
 [help]
 
 	# Automatically correct and execute mistyped commands
 	autocorrect = 1
 
 [merge]
-
+	tool = /usr/bin/meld
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
 
@@ -185,3 +210,8 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+
+[user]  # May this should be removed if set per project
+	# Justera och ta bort kommenteringsmärket från följande rader:
+	name = Klas Sehlstedt
+	email = klas@sehlstedt.se

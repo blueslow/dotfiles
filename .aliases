@@ -8,12 +8,36 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
+#Alias to change directory to working projects
+alias S='cd ~/work/STG350'
+alias M='cd ~/work/MSG500'
+alias WP='cd ~/work/pyth'
+alias W='cd ~/work'
+alias T='cd ~/tmp'
+
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
+alias d="cd ~/Dokument/Dropbox"
+alias dl="cd ~/Hämtningar"
+alias dt="cd ~/Skrivbord"
+alias p="cd ~/work"   # Work is shorter than projects
 alias g="git"
+
+# git alias should be checked
+alias gfetch='git fetch'
+alias gpull='git pull'
+alias gpush='git push'
+alias gci='git ci'
+
+alias P='/usr/bin/python'
+
+# Alias for state machine these should be moved to new dotfile
+alias smcP='java -jar $SMC -python'
+alias smcG2='java -jar $SMC -graph -glevel 2'
+alias smcG1='java -jar $SMC -graph -glevel 1'
+alias smcG='java -jar $SMC -graph '
+
+alias pdfmerge='gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=./output.pdf'
+alias AFIND='find / \( -path /backup -o -path /home/klaseh/klaseh -o -path /home/klaseh/shared -o -path /proc \) -prune -o'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

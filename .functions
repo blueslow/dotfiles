@@ -197,3 +197,37 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+# `a` with no arguments opens the current directory in atom, otherwise opens the
+# given location
+function a() {
+	if [ $# -eq 0 ]; then
+		atom .;
+	else
+		atom "$@";
+	fi;
+}
+
+# `e` with no arguments opens the current directory in emacs, otherwise opens the
+# given location
+function e() {
+	if [ $# -eq 0 ]; then
+		emacs .;
+	else
+		emacs "$@";
+	fi;
+}
+
+# `lssha` load and evaluate ssh-agent if it isn't already loaded
+function lssha() {
+	if [ -z "$SSH_AUTH_SOCK" ]; then
+	    eval `ssh-agent`;
+	    ssh-add;
+	fi;
+}
+
+# `propX` to propagate X11 over ssh when sudo
+function propX() {
+	LIVE=`echo $DISPLAY | awk -F: '{print $2}' | awk -F. '{print $1}'`
+	xauth list | grep unix:$LIVE | awk '{print "xauth add " $0}' >/home/klaseh/tmp/xuser
+}
