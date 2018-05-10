@@ -212,9 +212,9 @@ function a() {
 # given location
 function e() {
 	if [ $# -eq 0 ]; then
-		emacs .;
+		emacs . &
 	else
-		emacs "$@";
+		emacs "$@" &
 	fi;
 }
 
