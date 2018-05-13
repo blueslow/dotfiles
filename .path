@@ -1,6 +1,8 @@
+#!/usr/bin/env bash
+
 # Extra path configuration
 
 # set PATH so it includes Kussered's generic bin directory if it exists
-if [ -d "$HOME/shared/lbin" ] ; then
-    PATH="$HOME/shared/lbin:$PATH"
-fi
+#if [ -d "$HOME/shared/lbin" ] ; then
+#    PATH="$HOME/shared/lbin:$PATH"
+#fi
