@@ -79,7 +79,7 @@
 		fi \
 	}; f"
 
-	# CHeck up these aliases, from previous motoguzzi
+	# Check up these aliases, from previous motoguzzi
 	co = checkout
 	ci = commit
 	st = status
@@ -211,7 +211,11 @@
 
 	insteadOf = "gist:"
 
-[user]  # May this should be removed if set per project
+# [url "pgit://aprilia.sehlstedt.se/"]
+#
+# 	insteadOf = "pgit:"
+
+[user]  # Maybe this should be removed if set per project
 	# Justera och ta bort kommenteringsmärket från följande rader:
 	name = Klas Sehlstedt
 	email = klas@sehlstedt.se
