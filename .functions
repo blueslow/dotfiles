@@ -242,3 +242,10 @@ function rpmupdateAtom() {
 	fi
 
 }
+
+# 'gSetTemplate' set the git commit global template file to
+function gSetTemplate() {
+	if [ -r $HOME/.gitmessage.txt ]; then
+		git config --global commit.template $HOME/.gitmessage.txt
+	fi
+}
