@@ -8,6 +8,8 @@
 # Provide links or keys to any relevant tickets, articles or other resources
 # Example: Github issue #23
 
+#Changes to be committed:
+
 # --- COMMIT END ---
 # Type can be
 #    feat     (new feature)
