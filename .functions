@@ -229,7 +229,9 @@ function lssha() {
 # `propX` to propagate X11 over ssh when sudo
 function propX() {
 	LIVE=`echo $DISPLAY | awk -F: '{print $2}' | awk -F. '{print $1}'`
-	xauth list | grep unix:$LIVE | awk '{print "xauth add " $0}' >$HOME/tmp/xuser
+	echo "#!/bin/bash" >$HOME/tmp/xuser
+	xauth list | grep unix:$LIVE | awk '{print "xauth add " $0}' >>$HOME/tmp/xuser
+	chmod go+x $HOME/tmp/xuser
 }
 
 # 'rpmupdateAtom' Uppdate atom if new version exists
