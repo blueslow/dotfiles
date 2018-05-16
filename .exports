@@ -49,3 +49,7 @@ if [ -f "$HOME/src/smc/smc_6_6_0/bin/Smc.jar" ] ; then
     export SMC_HOME
     export SMC
 fi
+
+#Python
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7
+export WORKON_HOME=$HOME/Envs

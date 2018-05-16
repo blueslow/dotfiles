@@ -173,3 +173,9 @@ alias reload="exec ${SHELL} -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+# Virtualenvwrapper short
+alias venvwrap='source /usr/local/bin/virtualenvwrapper.sh'
+
+# Make dotfiles current working directory
+alias dotf='cd $HOME/dotfiles'
