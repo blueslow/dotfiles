@@ -27,6 +27,7 @@ alias gfetch='git fetch'
 alias gpull='git pull'
 alias gpush='git push'
 alias gci='git ci'
+alias git='LC_ALL=en_US git'
 
 alias P='/usr/bin/python'
 
