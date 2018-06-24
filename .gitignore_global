@@ -55,7 +55,7 @@ desktop.ini
 *~
 _autosave-*
 *.tmp
-*-cache.lib
+#*-cache.lib
 *-rescue.lib
 *-save.pro
 *-save.kicad_pcb

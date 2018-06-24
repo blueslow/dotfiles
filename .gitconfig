@@ -153,6 +153,7 @@
 
 	# https://help.github.com/articles/signing-commits-using-gpg/
 	gpgsign = false
+	template = /home/klaseh/.gitmessage.txt
 
 [diff]
 
@@ -219,3 +220,6 @@
 	# Justera och ta bort kommenteringsmärket från följande rader:
 	name = Klas Sehlstedt
 	email = klas@sehlstedt.se
+[filter "kicad_sch"]
+	clean = "sed -E 's/#(PWR|FLG)[0-9]+/#\\1?/'"
+	smudge = cat
