@@ -258,3 +258,8 @@ function lazygit() {
     git commit -a -m "$1"
     git push
 }
+
+# grep recusive in c and h files for pattern in $1
+function recgrep() {
+	grep --include=\*.{c,h} -rnw '.' -e "$1"
+}
