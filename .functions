@@ -229,10 +229,12 @@ function lssha() {
 # `propX` to propagate X11 over ssh when sudo
 function propX() {
 	LIVE=`echo $DISPLAY | awk -F: '{print $2}' | awk -F. '{print $1}'`
-	xauth list | grep unix:$LIVE | awk '{print "xauth add " $0}' >$HOME/tmp/xuser
+	echo "#!/bin/bash" >$HOME/tmp/xuser
+	xauth list | grep unix:$LIVE | awk '{print "xauth add " $0}' >>$HOME/tmp/xuser
+	chmod go+x $HOME/tmp/xuser
 }
 
-# 'rpmupdateAtom' Uppdate atom if new version exists
+# 'rpmupdateAtom' Uppdate atom in rpm based systems if new version exists
 function rpmupdateAtom() {
 	ATOM_INSTALLED_VERSION=$(rpm -qi atom | grep "Version" |  cut -d ':' -f 2 | cut -d ' ' -f 2)
 	ATOM_LATEST_VERSION=$(curl -sL "https://api.github.com/repos/atom/atom/releases/latest" | grep -E "https.*atom-amd64.tar.gz" | cut -d '"' -f 4 | cut -d '/' -f 8 | sed 's/v//g')
@@ -248,4 +250,16 @@ function gSetTemplate() {
 	if [ -r $HOME/.gitmessage.txt ]; then
 		git config --global commit.template $HOME/.gitmessage.txt
 	fi
+}
+
+# lgit (Lazy git)  add commit and push files in current directory and below
+function lazygit() {
+    git add .
+    git commit -a -m "$1"
+    git push
+}
+
+# grep recusive in c and h files for pattern in $1
+function recgrep() {
+	grep --include=\*.{c,h} -rnw '.' -e "$1"
 }
