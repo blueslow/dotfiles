@@ -42,3 +42,5 @@ desktop.ini
 # MS word generated files #
 ##############################
 # ~$*.docx
+
+.ipynb_checkpoints
