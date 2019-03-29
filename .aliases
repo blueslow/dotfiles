@@ -180,3 +180,8 @@ alias venvwrap='source /usr/local/bin/virtualenvwrapper.sh'
 
 # Make dotfiles current working directory
 alias dotf='cd $HOME/dotfiles'
+
+
+# ssh to hassio
+alias HASSIO='ssh root@raspberrypi3w.sehlstedt.se'
+alias HASSIO_IP = 'ssh root@192.168.10.44'
