@@ -30,6 +30,7 @@ alias gci='git ci'
 alias git='LC_ALL=en_US git' # force git to use english
 
 alias P='/usr/bin/python'
+alias P3='/usr/bin/python3'
 
 # Alias for state machine these should be moved to new dotfile
 alias smcP='java -jar $SMC -python'
@@ -184,4 +185,8 @@ alias dotf='cd $HOME/dotfiles'
 
 # ssh to hassio
 alias HASSIO='ssh root@raspberrypi3w.sehlstedt.se'
-alias HASSIO_IP = 'ssh root@192.168.10.44'
+alias HASSIO_IP='ssh root@192.168.10.44'
+
+# make executable
+alias mxu='chmod u+x'
+alias mx='chmod +x'
