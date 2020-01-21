@@ -192,3 +192,7 @@ alias mxu='chmod u+x'
 alias mx='chmod +x'
 
 alias yuo-dl='youtube-dl--external-downloader aria2c --external-downloader-args "-j 12 -s 12 -x 12 -k 5M" -i'
+
+
+#mute on off
+alias mute='amixer -q -D pulse sset Master toggle'
