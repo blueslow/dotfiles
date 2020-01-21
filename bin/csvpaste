@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if  [ $# -ne 3 ] ; then
+    echo Combine two csv files into one.
+    echo Takes three file argument src1, src2, dest
+    echo Removes the 7 last fields.
+    exit 1
+fi
+
+t=$(mktemp)
+#echo $t
+
+paste -d "," "$1" "$2" | sed -e "s/\r//g"  > $t
+
+cat $t | rev | cut -d, -f 8- | rev > "$3"
+
+rm $t
