@@ -191,8 +191,9 @@ alias HASSIO_IP='ssh root@192.168.10.44'
 alias mxu='chmod u+x'
 alias mx='chmod +x'
 
-alias yuo-dl='youtube-dl -i --sleep-interval 10 --max-sleep-interval 90 --external-downloader aria2c --external-downloader-args "-j 12 -s 12 -x 12 -k 5M --file-allocation=none --console-log-level=error --quiet"'
+alias yo-dl-d='youtube-dl -i --sleep-interval 10 --max-sleep-interval 90 --external-downloader aria2c --external-downloader-args "-j 12 -s 12 -x 12 -k 5M --file-allocation=none --console-log-level=error --quiet"'
+alias yo-dl='youtube-dl -i  --external-downloader aria2c --external-downloader-args "-j 12 -s 12 -x 12 -k 5M --file-allocation=none --console-log-level=error --quiet"'
 
 
-#mute on off
+#mute on off toggle
 alias mute='amixer -q -D pulse sset Master toggle'
