@@ -263,3 +263,4 @@ function lazygit() {
 function recgrep() {
 	grep --include=\*.{c,h} -rnw '.' -e "$1"
 }
+

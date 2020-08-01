@@ -1,1 +1,1 @@
-java -jar  ~/bin/JabRef-4.0.jar >>~/tmp/jabref.log 2>&1 &
+java -jar  ~/bin/JabRef-4.3.1.jar >>~/tmp/jabref.log 2>&1 &
