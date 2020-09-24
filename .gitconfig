@@ -119,8 +119,8 @@
 	untrackedCache = true
 
 	# Previous settings on Motoguzzi
-	autocrlf = input
-	safecrlf = true
+	autocrlf = false
+	safecrlf = false
 	editor = atom --wait
 	excludesfile = ~/.gitignore_global
 

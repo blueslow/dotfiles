@@ -71,5 +71,5 @@ _autosave-*
 *.xml
 *.csv
 
-
-.ipynb_checkpoints
+#jupyter
+.ipynb_checkpoints/
