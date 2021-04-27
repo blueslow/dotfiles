@@ -7,6 +7,27 @@ export PATH="$HOME/bin:/home/klaseh/.local/bin:$PATH";
 for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
+
+# Do os specific things that breaks in different OS
+UNAME=$(uname)
+if [ "$UNAME" == "Linux" ] ; then
+	# Linux specific things
+	file=.Linux_specific
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+elif [ "$UNAME" == "Darwin" ] ; then
+	# Mac OS X specific things
+	file=.Darwin_specific
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+elif [ "$UNAME" == "FreeBSD" ] ; then
+	# FreeBSD specific things
+	file=.FreeBSD_specific
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+elif [[ "$UNAME" == CYGWIN* || $UNAME = MINGW* ]] ; then
+	# Windows specific things, may need more test above
+	file=.Windows_specific
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+if
+
 unset file;
 
 # Case-insensitive globbing (used in pathname expansion)
