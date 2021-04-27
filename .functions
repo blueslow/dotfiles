@@ -6,6 +6,7 @@ function mkd() {
 }
 
 # Change working directory to the top-most Finder window location
+#OSX
 function cdf() { # short for `cdfinder`
 	cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')";
 }
@@ -264,3 +265,17 @@ function recgrep() {
 	grep --include=\*.{c,h} -rnw '.' -e "$1"
 }
 
+# print man pages
+printman () {
+    if [ -z "${PDFMAN+x}" ] ; then
+        echo "Environment variable PDFMAN is unset." >&2
+        echo "IF"
+        echo "Directory  does not exist." >&2
+        echo "ELIF"
+        return 1
+    else
+        echo "else"
+        man -t "$1" | ps2pdf "${PDFMAN}/$1"
+    fi
+    return 0
+}

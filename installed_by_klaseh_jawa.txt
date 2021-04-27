@@ -1,0 +1,135 @@
+ 2443  sudo apt-get install ddd
+ 3908  sudo apt install cmake-qt-gui
+ 9735  sudo apt-get install adb
+ 9748  sudo apt-get install eclipse
+ 9763  sudo apt-get install galternatives
+ 9781  sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
+ 9789  $ sudo apt-get install build-essential cmake unzip pkg-config
+ 9791  sudo apt-get install build-essential cmake unzip pkg-config
+ 9792  sudo apt-get install libjpeg-dev libpng-dev libtiff-dev
+ 9793  sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+ 9794  sudo apt-get install libxvidcore-dev libx264-dev
+ 9795  sudo apt-get install libgtk-3-dev
+ 9796  sudo apt-get install libatlas-base-dev gfortran
+10311  sudo -H apt-get install python3-sphinx
+10687  udo apt-get install python3-tk
+10688  sudo apt-get install python3-tk
+11118  sudo apt install cpuid
+11123  sudo apt install python3-dev python3-pip 
+11127  sudo apt-get install pkg-config zip g++ zlib1g-dev unzip python
+11146  sudo apt-get install openjdk-8-jdk
+11317  sudo apt install hardinfo
+11336  sudo apt-get install python-yam
+11337  sudo apt-get install python-yaml
+12299  sudo apt install at
+12752  sudo apt install gitk
+14792  sudo apt install inetutils-traceroute
+15519  sudo apt install vim
+15817  sudo apt-get install alsamixergui
+17225  sudo apt install autoconf
+17227  sudo apt install autopoint 
+17229  sudo apt install automake
+17230  sudo apt install autotools-dev
+17231  sudo apt install libcppunit-dev
+17232  sudo apt install libtool
+18262  sudo apt install fdupes
+18263  sudo apt install rdfind
+19285  sudo apt-get install xvfb xserver-xephyr vnc4server
+19363  sudo apt-get update && sudo apt-get install spotify-client
+19623  sudo apt-get install cinnamon
+19656  sudo apt-get --resinstall install cinnamon
+19657  sudo apt-get --reinstall install cinnamon
+19659  sudo apt install slick-greeter lightdm lightdm-settings apparmo
+19660  sudo apt-get install slick-greeter lightdm lightdm-settings apparmo
+19708  apt install timeshift
+19881  sudo apt-get install openjfx
+20358  sudo apt-get install nvidia-prime
+20394  sudo apt-get install smplayer smtube smplayer-themes smplayer-skins
+20397  sudo apt-get install mpv
+20620  sudo apt-get install software-properties-common
+20623  sudo apt-get install kodi
+20784  sudo apt install vdpauinfo
+20789  sudo apt install snapd
+20790  sudo apt uninstall snapd
+21391  apt list --installed 
+21890  sudo apt install libav-tools
+22011  sudo apt-get install python3-pyqt5
+22012  sudo apt-get install pyqt5-dev-tools
+22013  sudo apt-get install qttools5-dev-tools
+22587  sudo apt install python3.7
+22722  sudo apt-get install update-manager
+22726  sudo apt-get install update-manager
+22730  sudo apt-get install update-manager
+22759  apt install lightdm lightdm-settings slick-greeter
+22769  apt install mintupgrade
+23388  sudo apt list --installed
+23393  sudo apt-get install xrdp
+23542  sudo apt install iperf
+23595  sudo apt install iperf3
+23669  sudo apt-get install atom
+23671  sudo apt-get install atom-beta
+23675  sudo apt install clang
+24139  sudo apt install sysbench
+28666  sudo apt-get install wget build-essential checkinstall
+28667  sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev     libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev zlib1g-dev
+28777  sudo apt-get install mintupgrade
+28789  sudo apt install mintupgrade
+28801  sudo apt install python3-pip
+28802  sudo apt install --force python3-pip
+28804  sudo apt install  python3-pip
+28925  apt install mintupgrade
+28998  apt install --reinstall hplip hplip-data
+28999  apt install --reinstall python3
+29000  apt install --reinstall python3
+29039  sudo apt install meld
+29165  sudo apt install python3-pyqt5
+29167  sudo apt install python3-pyqt5.qtsql
+29173  sudo apt install sqlite3
+29177  sudo apt install git
+29229  sudo apt install emacs
+29250  sudo apt install ssh
+29273  sudo apt install cifs
+29274  sudo apt install cifs-utils
+29316  sudo apt -y install r-base gdebi-core
+29368  sudo apt install default-jre
+29370  sudo apt install default-jdk
+29377  sudo apt install texlive-latex-extra
+29378  sudo apt install texmaker
+29388  sudo apt install okular
+29405  sudo apt install keepass
+29406  sudo apt install keepass2
+29414  sudo apt install gnome-shell-extensions
+29415  sudo apt install chrome-gnome-shell
+29434  sudo apt install python2
+29435  sudo apt install python-pip
+29436  sudo apt install python3-pip
+29439  sudo apt install python2-pip
+29446  sudo apt install python2
+29453  sudo apt install curl
+29491  $ sudo apt install cinnamon-desktop-environment
+29492  sudo apt install cinnamon-desktop-environment
+29505  sudo apt install dconf-editor
+29529  sudo apt install ariac2c
+29530  sudo apt install aria2c
+29561  sudo apt-get install -f
+29569  sudo apt install balena-etcher
+29573  sudo apt install klatexformula
+29574  sudo apt install regexxer
+29687  sudo apt install ubuntu-restricted-extras
+29710  sudo apt install net-tools -y
+29845  sudo apt install ifcopenshell
+29858  sudo apt install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
+29869  sudo apt install ifcopenshell
+29874  sudo apt-get install pycodestyle
+29876  sudo apt-get install flake8
+29908  sudo apt install ubuntu-restricted-extras ubuntu-restricted-addons libdvd-pkg
+30090  sudo apt install zenmap -y
+30131  sudo apt install xrdp
+30133  sudo apt install xrdp
+30342  sudo apt install nodejs
+31480  sudo apt install moreutils
+31495  sudo apt install parallel
+31570  sudo apt install evtest
+31624  sudo apt install atom
+31625  sudo apt-get install atom
+32635  sudo apt install npm

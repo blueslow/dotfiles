@@ -12,3 +12,6 @@
 
 # Source virtualenvwrapper
 #source /usr/local/bin/virtualenvwrapper.sh
+
+
+#/usr/bin/synergyc 192.168.10.27
