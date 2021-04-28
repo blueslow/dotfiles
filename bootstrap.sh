@@ -38,7 +38,7 @@ function doIt() {
 	fi
 
 	EXC=${EXC}" -avh --no-perms"
-	rsync ${EXC} . ~/apa;
+	rsync ${EXC} . ~;
 	source ~/.bash_profile;
 
 }
