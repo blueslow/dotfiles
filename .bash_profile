@@ -12,21 +12,18 @@ done;
 UNAME=$(uname)
 if [ "$UNAME" == "Linux" ] ; then
 	# Linux specific things
-	file=.Linux_specific
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+	file=".Linux_specific"
 elif [ "$UNAME" == "Darwin" ] ; then
 	# Mac OS X specific things
-	file=.Darwin_specific
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+	file=".Darwin_specific"
 elif [ "$UNAME" == "FreeBSD" ] ; then
 	# FreeBSD specific things
-	file=.FreeBSD_specific
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+	file=".FreeBSD_specific"
 elif [[ "$UNAME" == CYGWIN* || $UNAME = MINGW* ]] ; then
 	# Windows specific things, may need more test above
-	file=.Windows_specific
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
-if
+	file="".Windows_specific"
+fi
+[ -r "$file" ] && [ -f "$file" ] && source "$file";
 
 unset file;
 

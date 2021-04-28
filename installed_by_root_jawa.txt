@@ -1,5 +1,5 @@
-  262  apt install gedit
-  292  apt install -f
-  302  apt-get --reinstall install libfltk1.1
-  308  apt-get --reinstall install alsa-tools-gui
-  353  apt-get install atom
+  apt install gedit
+  apt install -f
+  apt-get --reinstall install libfltk1.1
+  apt-get --reinstall install alsa-tools-gui
+  apt-get install atom
