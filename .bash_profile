@@ -21,7 +21,7 @@ elif [ "$UNAME" == "FreeBSD" ] ; then
 	file=".FreeBSD_specific"
 elif [[ "$UNAME" == CYGWIN* || $UNAME = MINGW* ]] ; then
 	# Windows specific things, may need more test above
-	file="".Windows_specific"
+	file=".Windows_specific"
 fi
 [ -r "$file" ] && [ -f "$file" ] && source "$file";
 
