@@ -18,6 +18,7 @@ function doIt() {
 	EXC=${EXC}" --exclude installed_su.txt"
 	EXC=${EXC}" --exclude installed.txt"
 	EXC=${EXC}" --exclude bashrc"
+	EXC=${EXC}" --exclude bash_logout"
 
 	UNAME=$(uname)
 	if [ "$UNAME" == "Linux" ] ; then
