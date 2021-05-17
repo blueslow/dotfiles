@@ -15,6 +15,9 @@ function doIt() {
 	EXC=${EXC}" --exclude todo.md"
 	EXC=${EXC}" --exclude installed_by_klaseh_jawa.txt"
 	EXC=${EXC}" --exclude installed_by_root_jawa.txt"
+	EXC=${EXC}" --exclude installed_su.txt"
+	EXC=${EXC}" --exclude installed.txt"
+	EXC=${EXC}" --exclude bashrc"
 
 	UNAME=$(uname)
 	if [ "$UNAME" == "Linux" ] ; then
@@ -39,7 +42,13 @@ function doIt() {
 
 	EXC=${EXC}" -avh --no-perms"
 	rsync ${EXC} . ~;
+    grep -f bashrc ~/.bashrc
+    ret=$?
+    if [ $ret -ne 0 ]; then 
+        cat bashrc >> ~/.bashrc
+    fi
 	source ~/.bash_profile;
+
 
 }
 
