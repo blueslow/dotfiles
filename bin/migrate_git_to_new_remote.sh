@@ -14,7 +14,8 @@ git remote -v
 echo " "
 echo  "Now add  refs and tags"
 git push norigin refs/remotes/origin/*:refs/heads/*
-git push --tags  norigin 
+# git push norigin --all
+git push norigin  --tags
 echo " "
 echo  "Result: "
 git branch  -a -vv
